@@ -1,0 +1,98 @@
+<core:View controllerName="urungiris.controller.SignChange" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:form="sap.ui.layout.form" xmlns:layout="sap.ui.layout">
+	<Page title="{i18n>CHANGE_PASS}" navButtonPress="onNavBack" showNavButton="true">
+		<form:Form id="idLoginForm" editable="true" title="{i18n>LOGIN_FORM}" class="LoginForm">
+			<form:layout>
+				<form:ResponsiveGridLayout xmlns:form="sap.ui.layout.form" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsL="0" columnsM="1"></form:ResponsiveGridLayout>
+			</form:layout>
+			<form:formContainers>
+				<form:FormContainer id="idLoginFormContainer">
+					<form:formElements>
+						<form:FormElement>
+							<form:label>
+								<Label text="{i18n>USERNAME}" class="formLabel">
+									<layoutData>
+										<layout:GridData span="L5 M4 S4" indent="L0 M0 S0"/>
+									</layoutData>
+								</Label>
+							</form:label>
+							<form:fields>
+								<Input id="idUserNameInput">
+									<layoutData>
+										<layout:GridData span="L3 M4 S8" indent="L0 M0 S0"/>
+									</layoutData>
+								</Input>
+							</form:fields>
+						</form:FormElement>
+						<form:FormElement>
+							<form:label>
+								<Label text="{i18n>OLD_PASSWORD}" class="formLabel">
+									<layoutData>
+										<layout:GridData span="L5 M4 S4" indent="L0 M0 S0"/>
+									</layoutData>
+								</Label>
+							</form:label>
+							<form:fields>
+								<Input id="idOldPass" type="Password">
+									<layoutData>
+										<layout:GridData span="L3 M4 S8" indent="L0 M0 S0"/>
+									</layoutData>
+								</Input>
+							</form:fields>
+						</form:FormElement>
+						<form:FormElement>
+							<form:label>
+								<Label text="{i18n>NEW_PASSWORD}" class="formLabel">
+									<layoutData>
+										<layout:GridData span="L5 M4 S4" indent="L0 M0 S0"/>
+									</layoutData>
+								</Label>
+							</form:label>
+							<form:fields>
+								<Input id="idNewPass" type="Password">
+									<layoutData>
+										<layout:GridData span="L3 M4 S8" indent="L0 M0 S0"/>
+									</layoutData>
+								</Input>
+							</form:fields>
+						</form:FormElement>
+						<form:FormElement>
+							<form:label>
+								<Label text="{i18n>RENEW_PASSWORD}" class="formLabel">
+									<layoutData>
+										<layout:GridData span="L5 M4 S4" indent="L0 M0 S0"/>
+									</layoutData>
+								</Label>
+							</form:label>
+							<form:fields>
+								<Input id="idNewPassRe" type="Password">
+									<layoutData>
+										<layout:GridData span="L3 M4 S8" indent="L0 M0 S0"/>
+									</layoutData>
+								</Input>
+							</form:fields>
+						</form:FormElement>
+						<form:FormElement>
+							<form:fields>
+								<Button id="idChangePass" type="Emphasized" text="{i18n>CHANGEBUTTON}" press="handleChangePassword">
+									<layoutData>
+										<layout:GridData span="L3 M4 S8" indent="L5 M5 S4"/>
+									</layoutData>
+								</Button>
+							</form:fields>
+						</form:FormElement>
+						<!-- <form:FormElement>
+                    <form:fields>
+                      <Button id="idSignupButton" type="Emphasized" text="{i18n>SAVE_INFO}" press="handleSignupButtonPress">
+                        <layoutData>
+                          <layout:GridData span="L3 M4 S8" indent="L5 M5 S4" />
+                        </layoutData>
+                      </Button>
+                    </form:fields>
+                  </form:FormElement> -->
+					</form:formElements>
+				</form:FormContainer>
+			</form:formContainers>
+		</form:Form>
+	</Page>
+</core:View>

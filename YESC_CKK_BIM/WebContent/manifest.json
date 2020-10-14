@@ -1,0 +1,185 @@
+{
+	"_version": "1.7.0",
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "ZURUN_GIRIS",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"ach": "ach",
+		"resources": "resources.json",
+		"dataSources": {
+			"YESC_CKK_BIM_SRV": {
+				"uri": "/sap/opu/odata/sap/YESC_CKK_BIM_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"_version": "1.1.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_bluecrystal"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"rootView": {
+			"viewName": "urungiris.view.App",
+			"type": "XML"
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.ui.comp": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "urungiris.i18n.i18n"
+				}
+			},
+			"": {
+				"type": "sap.ui.model.odata.V2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Client",
+					"defaultBindingMode": "TwoWay",
+					"defaultCountMode": "Inline",
+					"headers": {
+						"X-Requested-With": "X"
+					}
+				}
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "urungiris.view",
+				"controlId": "mainApp",
+				"controlAggregation": "pages",
+				"transition": "slide",
+				"bypassed": {
+					"target": "notFound"
+				}
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "signUp",
+					"target": "signUp"
+				},
+				{
+					"pattern": "SignChange/{Username}",
+					"name": "signChange",
+					"target": "signChange"
+				},
+				{
+					"pattern": "IslemListesi/{Uname}/{Type}/{Message}",
+					"name": "islemListesi",
+					"target": "islemListesi"
+				},
+				{
+					"pattern": "IadeGiris/{PersonelNo}/{Type}",
+					"name": "iadeGiris",
+					"target": "iadeGiris"
+				},
+				{
+					"pattern": "IadeListesiGiris/{PersonelNo}/{Type}",
+					"name": "iadeListesiGiris",
+					"target": "iadeListesiGiris"
+				},
+				{
+					"pattern": "IadeListesi/{PersonelNo}/{Type}/{BasTrh}/{BtsTrh}/{Kullanici}",
+					"name": "iadeListesi",
+					"target": "iadeListesi"
+				},
+				{
+					"pattern": "DashboardGiris/{PersonelNo}/{Type}",
+					"name": "dashboardGiris",
+					"target": "dashboardGiris"
+				},
+				{
+					"pattern": "Dashboard/{PersonelNo}/{Type}/{BasTrh}/{BtsTrh}/{Kullanici}",
+					"name": "dashboard",
+					"target": "dashboard"
+				}
+			],
+			"targets": {
+				"signUp": {
+					"viewName": "SignUp",
+					"viewLevel": 1
+				},
+				"signChange": {
+					"viewName": "SignChange",
+					"viewLevel": 2
+				},
+				"islemListesi": {
+					"viewName": "IslemListesi",
+					"viewLevel": 2
+				},
+				"iadeGiris": {
+					"viewName": "IadeGiris",
+					"viewLevel": 3
+				},
+				"iadeListesiGiris": {
+					"viewName": "IadeListesiGiris",
+					"viewLevel": 3
+				},
+				"iadeListesi": {
+					"viewName": "IadeListesi",
+					"viewLevel": 4
+				},
+				"dashboardGiris": {
+					"viewName": "DashboardGiris",
+					"viewLevel": 3
+				},
+				"dashboard": {
+					"viewName": "Dashboard",
+					"viewLevel": 4
+				}
+			}
+		}
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/yesc_ckk_bim/webcontent",
+		"_version": "1.1.0"
+	}
+}

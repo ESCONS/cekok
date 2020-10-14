@@ -1,0 +1,165 @@
+<core:View controllerName="urungiris.controller.SignUp" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:form="sap.ui.layout.form" xmlns:layout="sap.ui.layout">
+	<Page id="idSignUpPage" title="Online Bim İade" showNavButton="false" backgroundDesign="Transparent" class="">
+		<content>
+			<Toolbar class="sapUiMediumMarginTop" id="toolbar3">
+				<ToolbarSpacer/>
+				<Button text="Şifre Değiştir" type="Accept" press="navToChangePass">
+					<layoutData>
+						<ToolbarLayoutData shrinkable="true" maxWidth="150px"/>
+					</layoutData>
+				</Button>
+				<!--<Button text="success" type="Accept" visible="true" press="successor">-->
+				<!--	<layoutData>-->
+				<!--		<ToolbarLayoutData shrinkable="true" maxWidth="150px"/>-->
+				<!--	</layoutData>-->
+				<!--</Button>-->
+			</Toolbar>
+			<layout:Grid defaultSpan="L12 M12 S12" width="100%">
+				<layout:content>
+					<form:Form id="idActivationForm" editable="true" title="{i18n>ACTIVATION_FORM}" class="activationForm">
+						<form:layout>
+							<form:ResponsiveGridLayout xmlns:form="sap.ui.layout.form" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsL="0" columnsM="1"></form:ResponsiveGridLayout>
+						</form:layout>
+						<form:formContainers>
+							<form:FormContainer id="idActivationFormContainer">
+								<form:formElements>
+									<form:FormElement visible="false">
+										<form:label>
+											<Label text="{i18n>REQUEST_ID}" class="formLabel">
+												<layoutData>
+													<layout:GridData span="L5 M4 S4" indent="L0 M0 S0"/>
+												</layoutData>
+											</Label>
+										</form:label>
+										<form:fields>
+											<Input id="idRequestId" enabled="false">
+												<layoutData>
+													<layout:GridData span="L3 M4 S8" indent="L0 M0 S0"/>
+												</layoutData>
+											</Input>
+										</form:fields>
+									</form:FormElement>
+									<form:FormElement visible="false" class="formLabel">
+										<form:label>
+											<Label text="{i18n>ACTIVATION_KEY}">
+												<layoutData>
+													<layout:GridData span="L5 M4 S4" indent="L0 M0 S0"/>
+												</layoutData>
+											</Label>
+										</form:label>
+										<form:fields>
+											<Input id="idActivationKey" enabled="false">
+												<layoutData>
+													<layout:GridData span="L3 M4 S8" indent="L0 M0 S0"/>
+												</layoutData>
+											</Input>
+										</form:fields>
+									</form:FormElement>
+									<form:FormElement>
+										<form:label>
+											<Label text="{i18n>PASSWORD}" class="formLabel">
+												<layoutData>
+													<layout:GridData span="L5 M4 S4" indent="L0 M0 S0"/>
+												</layoutData>
+											</Label>
+										</form:label>
+										<form:fields>
+											<Input id="idPasswordInput" type="Password" liveChange="onPasswordLiveChange">
+												<layoutData>
+													<layout:GridData span="L3 M4 S8" indent="L0 M0 S0"/>
+												</layoutData>
+											</Input>
+										</form:fields>
+									</form:FormElement>
+									<form:FormElement>
+										<form:label>
+											<Label text="{i18n>RE_PASSWORD}" class="formLabel">
+												<layoutData>
+													<layout:GridData span="L5 M4 S4" indent="L0 M0 S0"/>
+												</layoutData>
+											</Label>
+										</form:label>
+										<form:fields>
+											<Input id="idRePasswordInput" type="Password" liveChange="onPasswordLiveChange">
+												<layoutData>
+													<layout:GridData span="L3 M4 S8" indent="L0 M0 S0"/>
+												</layoutData>
+											</Input>
+										</form:fields>
+									</form:FormElement>
+									<form:FormElement>
+										<form:fields>
+											<Button id="idSaveActivationButton" type="Emphasized" text="{i18n>SAVE_ACTIVATION}" press="handleSaveActivationButtonPress">
+												<layoutData>
+													<layout:GridData span="L3 M4 S8" indent="L5 M5 S4"/>
+												</layoutData>
+											</Button>
+										</form:fields>
+									</form:FormElement>
+								</form:formElements>
+							</form:FormContainer>
+						</form:formContainers>
+					</form:Form>
+					<form:Form id="idLoginForm" editable="true" title="{i18n>LOGIN_FORM}" class="LoginForm">
+						<form:layout>
+							<form:ResponsiveGridLayout xmlns:form="sap.ui.layout.form" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsL="0" columnsM="1"></form:ResponsiveGridLayout>
+						</form:layout>
+						<form:formContainers>
+							<form:FormContainer id="idLoginFormContainer">
+								<form:formElements>
+									<form:FormElement>
+										<form:label>
+											<Label text="{i18n>USERNAME}" class="formLabel">
+												<layoutData>
+													<layout:GridData span="L5 M4 S4" indent="L0 M0 S0"/>
+												</layoutData>
+											</Label>
+										</form:label>
+										<form:fields>
+											<Input id="idUserNameInput">
+												<layoutData>
+													<layout:GridData span="L3 M4 S8" indent="L0 M0 S0"/>
+												</layoutData>
+											</Input>
+										</form:fields>
+									</form:FormElement>
+									<form:FormElement>
+										<form:label>
+											<Label text="{i18n>PASSWORD}" class="formLabel">
+												<layoutData>
+													<layout:GridData span="L5 M4 S4" indent="L0 M0 S0"/>
+												</layoutData>
+											</Label>
+										</form:label>
+										<form:fields>
+											<Input id="idLoginPasswordInput" type="Password">
+												<layoutData>
+													<layout:GridData span="L3 M4 S8" indent="L0 M0 S0"/>
+												</layoutData>
+											</Input>
+										</form:fields>
+									</form:FormElement>
+									<form:FormElement>
+										<form:fields>
+											<Button id="idLoginButton" type="Emphasized" text="{i18n>LOGIN_FORM}" press="handleLoginButtonPress">
+												<layoutData>
+													<layout:GridData span="L3 M4 S8" indent="L5 M5 S4"/>
+												</layoutData>
+											</Button>
+										</form:fields>
+									</form:FormElement>
+								</form:formElements>
+							</form:FormContainer>
+						</form:formContainers>
+					</form:Form>
+				</layout:content>
+			</layout:Grid>
+		</content>
+	</Page>
+	<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" controllerName="cus.PKT.BIMIADE.view.SignUp">
+		<Dialog title="Hello test {/recipient/name}">
+			<Button text="TEST" press="send3D"></Button>
+		</Dialog>
+	</core:FragmentDefinition>
+</core:View>

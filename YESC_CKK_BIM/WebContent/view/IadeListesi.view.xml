@@ -1,0 +1,103 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="urungiris.controller.IadeListesi" xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<SplitContainer id="SplitContDemo" initialDetail="detail" initialMaster="master">
+		<masterPages>
+			<Page id="master" title="İade Listesi" icon="sap-icon://action" class="sapUiStdPage" showNavButton="true" navButtonPress="onNavBack">
+		
+				<content>
+					<List id="lstIadeBaslik" mode="{device>/listMode}"></List>
+				</content>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer/>
+					</Toolbar>
+				</footer>
+			</Page>
+		</masterPages>
+		<detailPages>
+			<Page id="detail" title="İade Detay" class="sapUiStdPage" showNavButton="true" navButtonPress="onPressMasterBack">
+				<content>
+					<ObjectHeader id="objHdrId">
+						<attributes> 
+							<ObjectAttribute id="oAttUname"/>
+							<ObjectAttribute id="oAttTime"/>
+						</attributes>
+					</ObjectHeader>
+				</content>
+				<content>
+					<Table id="tblIadeKalem">
+						<columns>
+							<Column>
+								<Label text="Malzeme"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+								<Label text="Parti"/>
+							</Column>
+							<Column width="7em">
+								<Label text="Tarih"/>
+							</Column>
+							
+							<Column width="4em">
+								<Label text="Miktar"/>
+							</Column>
+							<Column width="4em">
+								<Label text="Drm"/>
+							</Column>
+						</columns>
+					</Table>
+				</content>
+			</Page>
+			<Page id="detailDetail" title="İade Nedenleri" class="sapUiStdPage" showNavButton="true" navButtonPress="onPressDetailBack">
+				<content>
+					<Table id="tblIadeNeden">
+						<columns>
+							<Column width="6rem">
+								<Label text="İade Nedeni"/>
+							</Column>
+							<Column hAlign="Center" width="5rem">
+								<Label text="BIM Yüzde"/>
+							</Column>
+							<Column hAlign="Center" width="5rem">
+								<Label text="Çekok Yüzde"/>
+							</Column>
+						</columns>
+					</Table>
+					<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="4"
+						adjustLabelSpan="true" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2"
+						singleContainerFullSize="false">
+						<f:content>
+							<Label text="BİM Açıklama"/>
+							<TextArea id="txtABIMNot" rows="3" maxLength="225"/>
+							<Label text="ÇEKOK Açıklama"/>
+							<TextArea id="txtACekokNot" rows="3" maxLength="225"/>
+							<Label text="Karar"/>
+							<Select id="slctNeden">
+								<core:Item key="01" text="Uygun"></core:Item>
+								<core:Item key="02" text="Uygun değil"></core:Item>
+								<core:Item key="03" text="Analizde"></core:Item>
+							</Select>
+						</f:content>
+					</f:SimpleForm>
+				</content>
+				<content>
+					<UploadCollection id="uplCollList" maximumFilenameLength="60" maximumFileSize="10" multiple="false" showSeparators="All" change="onChange"
+						uploadComplete="onUploadComplete" beforeUploadStarts="onBeforeUploadStarts" fileDeleted="onFileDeleted" >
+						<toolbar>
+							<OverflowToolbar>
+								<Title id="attachmentTitle" text="Dosyalar"/>
+								<ToolbarSpacer/>
+								<UploadCollectionToolbarPlaceholder></UploadCollectionToolbarPlaceholder>
+							</OverflowToolbar>
+						</toolbar>
+					</UploadCollection>
+				</content>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button id="btnKaydet" text="Kaydet" icon="sap-icon://save" press="onPressCekokKaydet" type="Accept"/>
+					</Toolbar>
+				</footer>
+			</Page>
+		</detailPages>
+	</SplitContainer>
+</mvc:View>

@@ -1,0 +1,12 @@
+<mvc:View controllerName="urungiris.controller.Dashboard" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:viz="sap.viz.ui5.controls">
+	<Page title="Grafikler" class="sapUiResponsiveContentPadding" navButtonPress="onNavBack" showNavButton="true" floatingFooter="false">
+		<l:Grid defaultIndent="L0 M0 S0" defaultSpan="L12 M12 S12" position="Left" width="100%" containerQuery="false" hSpacing="1" vSpacing="1">
+			<viz:VizFrame xmlns="sap.viz" id="idpiechart" vizType="pie" width="90%"/>
+		</l:Grid>
+		<!--<l:VerticalLayout class="sapUiContentPadding" >-->
+		<!--	<viz:Popover id="idPopOver"></viz:Popover>-->
+		<!--	<viz:VizFrame  id="idpiechart" vizType="pie"/>-->
+		<!--</l:VerticalLayout>-->
+	</Page>
+</mvc:View>

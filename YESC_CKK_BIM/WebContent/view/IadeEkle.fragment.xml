@@ -1,0 +1,52 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout">
+	<Dialog title="Yeni Giriş" contentWidth="95%" contentHeight="90%">
+		<content>
+			<f:SimpleForm id="SimpleFormDisplay354wide" editable="false" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4"
+				labelSpanS="4" adjustLabelSpan="true" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2"
+				singleContainerFullSize="false">
+				<f:content>
+					<Label text="Ürün Adı" required="true"/>
+					<Input id="inpMalzeme" showValueHelp="true" valueHelpOnly="true" valueHelpRequest="onVHRHMATNR"/>
+					<Label text="Kasa Miktarı" required="true"/>
+					<Input id="inpMiktar" type="Number"/>
+					<Label text="Parti No" required="true"/>
+					<Input id="inpParti"/>
+					<Label text="İrsaliye" required="true"/>
+					<Input id="inpIrsaliye"/>
+					<Label text="Etiket Tarihi" required="true"/>
+					<DatePicker id="dtEtiketTrh" displayFormat="short" valueFormat="dd.MM.yyyy" placeholder="dd.MM.YYYY"/>
+					<Label text="Açıklama"/>
+					<TextArea id="txtANot" rows="3" maxLength="225"/>
+				</f:content>
+			</f:SimpleForm>
+			<Table id="tblIadeNeden">
+				<columns>
+					<Column width="6rem">
+						<Label text="İade Nedeni"/>
+					</Column>
+					<Column hAlign="Center" width="3rem">
+						<Label text="Yüzde"/>
+					</Column>
+				</columns>
+			</Table>
+		</content>
+		<content>
+			<UploadCollection id="uploadCollection" maximumFilenameLength="70" maximumFileSize="10" multiple="false" showSeparators="All"
+				change="onChange" uploadComplete="onUploadComplete" beforeUploadStarts="onBeforeUploadStarts" fileDeleted="onFileDeleted">
+				<toolbar>
+					<OverflowToolbar>
+						<Title text="Dosyalar"/>
+						<ToolbarSpacer/>
+						<UploadCollectionToolbarPlaceholder></UploadCollectionToolbarPlaceholder>
+					</OverflowToolbar>
+				</toolbar>
+			</UploadCollection>
+		</content>
+		<beginButton>
+			<Button text="İptal" icon="sap-icon://cancel" type="Reject" press="onPressIadeEkleCancel"/>
+		</beginButton>
+		<endButton>
+			<Button text="Tamam" icon="sap-icon://accept" type="Accept" press="onPressIadeEkleOK"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

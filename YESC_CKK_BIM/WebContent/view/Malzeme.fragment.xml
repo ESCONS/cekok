@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog
+		title="Masraf Yeri"
+		class="sapUiPopupWithPadding"
+		items="{talep>/MalzemeList}"
+		search="_handleMATNRSearch"
+		confirm="_handleMATNRClose"
+		cancel="_handleMATNRClose">
+		<StandardListItem
+			iconDensityAware="false"
+			iconInset="false"
+			title="{talep>Matnr}"
+			description="{talep>Maktx}" />
+	</SelectDialog>
+</core:FragmentDefinition>

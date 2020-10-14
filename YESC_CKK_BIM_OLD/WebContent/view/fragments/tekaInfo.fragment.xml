@@ -1,0 +1,138 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout" xmlns:form="sap.ui.layout.form">
+	<Panel id="idAciklama" expandable="true" expanded="false" width="auto" headerText="İletişim Bilgileri" class="sapUiResponsiveMargin">
+		<form:Form id="idExplanationForm" class="sapUiFormEdit-CTX">
+			<form:layout>
+				<form:ResponsiveGridLayout xmlns:form="sap.ui.layout.form" labelSpanL="2" labelSpanM="4" labelSpanS="12" emptySpanL="0" emptySpanM="4"
+					emptySpanS="0" columnsL="2" columnsM="2" columnsS="0"></form:ResponsiveGridLayout>
+			</form:layout>
+			<form:formContainers>
+				<form:FormContainer>
+					<form:title>
+						<core:Title text="Teka Bilgileri"/>
+					</form:title>
+					<form:formElements>
+						<form:FormElement>
+							<form:label>
+								<Label text="{i18n>FIRMA}" design="Bold"></Label>
+								<!-- text="{i18n>EXPLANATION}"-->
+							</form:label>
+							<form:fields>
+								<Text id="idCompanyName"></Text>
+							</form:fields>
+						</form:FormElement>
+					</form:formElements>
+					<form:formElements>
+						<form:FormElement>
+							<form:label>
+								<Label text="{i18n>ADDRESS}" design="Bold"></Label>
+								<!-- text="{i18n>EXPLANATION}"-->
+							</form:label>
+							<form:fields>
+								<Text id="idAddress"></Text>
+							</form:fields>
+						</form:FormElement>
+					</form:formElements>
+					<!-- <form:formElements>
+						<form:FormElement>
+							<form:label>
+								<Label text="{i18n>POSTCODE}"  design="Bold"></Label> text="{i18n>EXPLANATION}"
+							</form:label>
+							<form:fields>
+								<Text id="idPostCode">
+									<layoutData>
+										<layout:GridData span="L4 M6 S12" indent="L0 M0" />
+									</layoutData>
+								</Text>
+							</form:fields>
+						</form:FormElement>
+					</form:formElements> -->
+					<form:formElements>
+						<form:FormElement>
+							<form:label>
+								<Label text="{i18n>PHONENO}" design="Bold"></Label>
+								<!-- text="{i18n>EXPLANATION}"-->
+							</form:label>
+							<form:fields>
+								<Text id="idPhoneNo"></Text>
+							</form:fields>
+						</form:FormElement>
+					</form:formElements>
+					<form:formElements>
+						<form:FormElement>
+							<form:label>
+								<Label text="{i18n>FAXNO}" design="Bold"></Label>
+								<!-- text="{i18n>EXPLANATION}"-->
+							</form:label>
+							<form:fields>
+								<Text id="idFaxNo"></Text>
+							</form:fields>
+						</form:FormElement>
+					</form:formElements>
+				</form:FormContainer>
+				<form:FormContainer>
+					<form:title>
+						<core:Title text="Müşteri Bilgileri"/>
+					</form:title>
+					<form:formElements>
+						<form:FormElement>
+							<form:label>
+								<Label text="{i18n>FIRMA}" design="Bold"></Label>
+								<!-- text="{i18n>EXPLANATION}"-->
+							</form:label>
+							<form:fields>
+								<Text id="idCompCompanyName"></Text>
+							</form:fields>
+						</form:FormElement>
+					</form:formElements>
+					<form:formElements>
+						<form:FormElement>
+							<form:label>
+								<Label text="{i18n>ADDRESS}" design="Bold"></Label>
+								<!-- text="{i18n>EXPLANATION}"-->
+							</form:label>
+							<form:fields>
+								<Text id="idCompAddress"></Text>
+							</form:fields>
+						</form:FormElement>
+					</form:formElements>
+					<!-- <form:formElements>
+						<form:FormElement>
+							<form:label>
+								<Label text="{i18n>POSTCODE}"  design="Bold"></Label> text="{i18n>EXPLANATION}"
+							</form:label>
+							<form:fields>
+								<Text id="idPostCode">
+									<layoutData>
+										<layout:GridData span="L4 M6 S12" indent="L0 M0" />
+									</layoutData>
+								</Text>
+							</form:fields>
+						</form:FormElement>
+					</form:formElements> -->
+					<form:formElements>
+						<form:FormElement>
+							<form:label>
+								<Label text="{i18n>PHONENO}" design="Bold"></Label>
+								<!-- text="{i18n>EXPLANATION}"-->
+							</form:label>
+							<form:fields>
+								<Text id="idCompPhoneNo"></Text>
+							</form:fields>
+						</form:FormElement>
+					</form:formElements>
+					<form:formElements>
+						<form:FormElement>
+							<form:label>
+								<Label text="{i18n>FAXNO}" design="Bold"></Label>
+								<!-- text="{i18n>EXPLANATION}"-->
+							</form:label>
+							<form:fields>
+								<Text id="idCompFaxNo"></Text>
+							</form:fields>
+						</form:FormElement>
+					</form:formElements>
+				</form:FormContainer>
+			</form:formContainers>
+		</form:Form>
+	</Panel>
+</core:FragmentDefinition>

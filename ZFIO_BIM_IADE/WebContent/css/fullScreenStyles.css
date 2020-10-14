@@ -1,0 +1,72 @@
+.sapMShellGlobalOuterBackground {
+    background-color: #f2f2f2;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f3d9cc), color-stop(50%, #fde3a8), color-stop(100%, #a73005));
+    background-image: -webkit-linear-gradient(top, #f3d9cc 0, #fde3a8 50%, #a73005 100%);
+    background-image: linear-gradient(to bottom, #f3d9cc 0, #fde3a8 50%, #a73005 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f3d9cc), color-stop(50%, #fde3a8), color-stop(100%, #a73005));
+    background-image: -webkit-linear-gradient(top, #f3d9cc 0, #fde3a8 50%, #a73005 100%);
+    background-image: linear-gradient(to bottom, #f3d9cc 0, #fde3a8 50%, #a73005 100%);
+}
+
+.sapUiFormM .sapUiRespGrid.sapUiRespGridVSpace0>div {
+    padding-bottom: 5px !important;
+}
+
+.signForm .sapUiFormTitle {
+    color: white;
+}
+
+.signForm .sapUiFormResGrid .sapUiFormResGridCont {
+    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.0);
+}
+
+.signForm .sapUiFormResGrid .sapUiFormTitle {
+    -ms-text-shadow: none;
+    text-shadow: none;
+}
+
+.activationForm .sapUiFormTitle {
+    color: white;
+}
+
+.activationForm .sapUiFormResGrid .sapUiFormResGridCont {
+    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.0);
+}
+
+.activationForm .sapUiFormResGrid .sapUiFormTitle {
+    -ms-text-shadow: none;
+    text-shadow: none;
+}
+
+.LoginForm .sapUiFormTitle {
+    color: white;
+}
+
+.LoginForm .sapUiFormResGrid .sapUiFormResGridCont {
+    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.0);
+}
+
+.LoginForm .sapUiFormResGrid .sapUiFormTitle {
+    -ms-text-shadow: none;
+    text-shadow: none;
+}
+
+.signPage {
+    text-align: center;
+}
+
+
+/*.formLabel {
+    color: white;
+}*/
+
+.SelectError {
+    border: 2px solid #e52929;
+}
+
+.SelectImage {
+    border: 2px solid #8B0000;
+}
